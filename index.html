@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Affairs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <button class="menu-btn">☰</button>
+            <h1>Current Affairs</h1>
+        </div>
+        <div class="header-right">
+            <button class="search-btn">🔍</button>
+            <button class="translate-btn">A</button>
+            <button class="bookmark-btn">🔖</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Events Section -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-title">Events</div>
+            </div>
+            <div class="cards-container horizontal-scroll">
+                <!-- Article Card -->
+                <div class="card event-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Article</h3>
+                        <span class="card-icon">📚</span>
+                    </div>
+                    <p class="card-subtitle">QuickCurrent affairs Articles for exam success.tap to read!</p>
+                    <button class="card-btn">See More Articles</button>
+                </div>
+
+                <!-- Neuro Quest Card -->
+                <div class="card event-card">
+                    <div class="card-header">
+                        <h3 class="card-title neuro-title">Neuro Quest</h3>
+                        <span class="card-icon">🎮</span>
+                    </div>
+                    <p class="card-subtitle">Ready to play? Neuro Quest makes current affairs exciting!</p>
+                    <button class="card-btn">Let's Play</button>
+                </div>
+
+                <!-- Number Ninjas Card -->
+                <div class="card event-card">
+                    <div class="card-header">
+                        <h3 class="card-title number-title">Number Ninjas</h3>
+                        <span class="card-icon">🎯</span>
+                    </div>
+                    <p class="card-subtitle">Spotting numbers helps solve problems faster and easier!</p>
+                    <button class="card-btn">Let's Play</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Current Affairs Section -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-title">Current Affairs</div>
+            </div>
+            <div class="cards-container">
+                <!-- Daily Current Affairs -->
+                <div class="card ca-card">
+                    <div class="card-icon-large">📚</div>
+                    <h3 class="card-title daily-title">Daily Current Affairs</h3>
+                    <p class="card-subtitle">Daily Current Affairs. Quick Bytes. Big Score.</p>
+                    <button class="card-btn">Daily Current Affairs</button>
+                </div>
+
+                <!-- Static Current Affairs -->
+                <div class="card ca-card">
+                    <div class="card-icon-large">💡</div>
+                    <h3 class="card-title static-title">Static Current Affairs</h3>
+                    <p class="card-subtitle">your shortcut to static GK success!</p>
+                    <button class="card-btn">Static Current Affairs</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Your Picks Section -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-title">Your Picks</div>
+            </div>
+            <div class="cards-container">
+                <!-- Exam History -->
+                <div class="card pick-card">
+                    <div class="pick-icon exam-icon">📋</div>
+                    <h3 class="pick-title">Exam History</h3>
+                </div>
+
+                <!-- Bookmark -->
+                <div class="card pick-card">
+                    <div class="pick-icon bookmark-icon">⭐</div>
+                    <h3 class="pick-title">Bookmark</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-title">Categories</div>
+            </div>
+            <div class="categories-grid">
+                <div class="category-item">
+                    <div class="category-icon india-icon">🇮🇳</div>
+                    <p class="category-name">India</p>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon business-icon">🤝</div>
+                    <p class="category-name">Business</p>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon world-icon">🌍</div>
+                    <p class="category-name">World</p>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon sports-icon">⚽</div>
+                    <p class="category-name">Sports</p>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon summit-icon">📋</div>
+                    <p class="category-name">Summit</p>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon bank-icon">🏦</div>
+                    <p class="category-name">Bank</p>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon yojana-icon">🏛️</div>
+                    <p class="category-name">Yojana</p>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon obituary-icon">📰</div>
+                    <p class="category-name">Obituary</p>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon science-icon">🔬</div>
+                    <p class="category-name">Science</p>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon education-icon">🏫</div>
+                    <p class="category-name">Education</p>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon law-icon">⚖️</div>
+                    <p class="category-name">Law</p>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon awards-icon">🏆</div>
+                    <p class="category-name">Awards</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <button class="nav-item active" data-page="home">
+            <span class="nav-icon">🏠</span>
+            <span class="nav-label">Home</span>
+        </button>
+        <button class="nav-item" data-page="ca">
+            <span class="nav-icon">📄</span>
+            <span class="nav-label">CA</span>
+        </button>
+        <button class="nav-item" data-page="articles">
+            <span class="nav-icon">📰</span>
+            <span class="nav-label">Articles</span>
+        </button>
+        <button class="nav-item" data-page="download">
+            <span class="nav-icon">⬇️</span>
+            <span class="nav-label">Download</span>
+        </button>
+        <button class="nav-item" data-page="games">
+            <span class="nav-icon">🎮</span>
+            <span class="nav-label">Games</span>
+        </button>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
