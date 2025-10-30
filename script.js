@@ -373,24 +373,40 @@ const currentAffairsData = {
 }
 
 let currentLanguage = "en";
-let dailyBtn = document.querySelector('.daily-current-affairs');
+let dailyBtn = document.querySelector(".daily-current-affairs");
 let isContentVisible = false;
 
 dailyBtn.addEventListener("click", () => {
-  const articlesContainer = document.querySelector('.articles-container');
+  const articlesContainer = document.querySelector(".articles-container");
 
   if (!isContentVisible) {
     console.log("[v0] Data loaded successfully:", currentAffairsData.cas.length, "articles");
+
+    // Render the content first (fills the container)
     renderContent();
-    articlesContainer.classList.add("show");
+
+    // Then show it (no empty space before rendering)
+    requestAnimationFrame(() => {
+      articlesContainer.classList.add("show");
+    });
+
     dailyBtn.textContent = "Hide Current Affairs";
   } else {
+    // Hide and clear the content
     articlesContainer.classList.remove("show");
+
+    // Optional: clear the HTML after animation ends
+    setTimeout(() => {
+      articlesContainer.innerHTML = "";
+    }, 300);
+
     dailyBtn.textContent = "Daily Current Affairs";
   }
 
   isContentVisible = !isContentVisible;
 });
+
+
 
 
 

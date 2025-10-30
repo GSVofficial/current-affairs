@@ -605,54 +605,87 @@ body {
   }
 }
 
+/* ===============================
+   🌑 Current Affairs Section
+   =============================== */
+
 .section-current-affairs {
+  background-color: #000; /* original dark theme */
+  color: #fff;
   padding: 30px 0;
 }
 
+/* Section Title */
 .section-current-affairs .section-title {
-  font-size: large;
-  color: #fafdfd;
-  margin-bottom: 25px;
-  text-align: left;
   font-weight: 100;
+  color: #f6f7f8; /* accent teal color */
+  margin-bottom: 20px;
+  text-align: left;          /* ✅ left aligned */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: large;
 }
 
+/* Section Header (Daily + Static Divs) */
 .section-current-affairs .section-header {
   display: flex;
-  justify-content: center;
-  align-items: stretch;
+  justify-content: center;   /* center the pair horizontally */
+  align-items: flex-start;
   flex-wrap: wrap;
   gap: 25px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
-
-.section-current-affairs .daily-current,
-.section-current-affairs .static-current {
-  flex: 1 1 300px;
-  max-width: 350px;
-  background: linear-gradient(135deg, #1f2937, #111827);
-  border: 1px solid #2d2d2d;
-  border-radius: 16px;
+/* Card Containers */
+.daily-current,
+.static-current {
+  background-color: #111; /* darker card background */
+  border: 1px solid #222;
+  border-radius: 12px;
   padding: 20px;
-  color: #fff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: left;
+  width: 280px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+.static-current
+{
+  padding: 26px;
 }
 
+.daily-current:hover,
+.static-current:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.3);
+}
+
+/* Card Titles */
+.daily-current h4,
+.static-current h4 {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+/* Subtext */
+.daily-current p,
+.static-current p {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  margin-bottom: 15px;
+}
+
+/* Buttons */
 .daily-current-affairs,
 .static-current-affairs {
   background-color: #06b6d4;
-  color: #fff;
+  color: white;
   border: none;
-  padding: 10px 18px;
   border-radius: 8px;
-  font-size: 0.9rem;
+  padding: 10px 20px;
   cursor: pointer;
   font-weight: 600;
   transition: background-color 0.3s ease;
-  margin-top: 10px;
 }
 
 .daily-current-affairs:hover,
@@ -660,43 +693,77 @@ body {
   background-color: #0891b2;
 }
 
-/* === Article Cards Grid === */
 .articles-container {
-  width: 70%;
-  margin: 0 auto;
   display: none;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 16px;
-  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .articles-container.show {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  opacity: 1;
 }
 
+
+/* Article Card */
 .article-card {
-  background: #1f2937;
-  border: 1px solid #2d2d2d;
-  border-radius: 12px;
-  padding: 16px;
-  color: #fff;
-  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #111;
+  border: 1px solid #222;
+  border-radius: 10px;
+  padding: 15px;
+  width: 240px;
+  transition: 0.3s;
 }
 
 .article-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 0 12px rgba(6, 182, 212, 0.3);
 }
 
 .article-card h3 {
   color: #06b6d4;
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: 8px;
 }
 
 .article-card p {
-  color: #b0b0b0;
+  color: #cbd5e1;
   font-size: 0.9rem;
-  line-height: 1.4;
 }
 
+/* ===============================
+   📱 Responsive Design (Mobile)
+   =============================== */
+@media (max-width: 768px) {
+  .section-current-affairs {
+    padding: 20px 0;
+  }
+
+  .section-current-affairs .section-title {
+    margin-left: 16px;  /* ✅ stays left aligned */
+    font-size: 1.4rem;
+  }
+
+  .section-current-affairs .section-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .daily-current,
+  .static-current {
+    width: 90%;
+  }
+
+  .articles-container {
+    flex-direction: column;
+    align-items: center;
+    max-width: 95%;
+  }
+
+  .article-card {
+    width: 90%;
+  }
+}
