@@ -372,12 +372,27 @@ const currentAffairsData = {
   ],
 }
 
-let currentLanguage = "en"
+let currentLanguage = "en";
+let dailyBtn = document.querySelector('.daily-current-affairs');
+let isContentVisible = false;
 
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("[v0] Data loaded successfully:", currentAffairsData.cas.length, "articles")
-  renderContent()
-})
+dailyBtn.addEventListener("click", () => {
+  const articlesContainer = document.querySelector('.articles-container');
+
+  if (!isContentVisible) {
+    console.log("[v0] Data loaded successfully:", currentAffairsData.cas.length, "articles");
+    renderContent();
+    articlesContainer.classList.add("show");
+    dailyBtn.textContent = "Hide Current Affairs";
+  } else {
+    articlesContainer.classList.remove("show");
+    dailyBtn.textContent = "Daily Current Affairs";
+  }
+
+  isContentVisible = !isContentVisible;
+});
+
+
 
 // Language switching
 document.querySelectorAll(".lang-btn").forEach((btn) => {

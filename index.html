@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Current Affairs</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
 
@@ -69,12 +71,32 @@
         </section>
 
         <!-- Current Affairs Section -->
-        <section class="section">
-            <div class="section-header">
-                <div class="section-title">Current Affairs</div>
-            </div>
-            <!-- Added articles-container for dynamic content -->
-            <div class="articles-container cards-container"></div>
+<section class="section section-current-affairs">
+  <h2 class="section-title">Current Affairs</h2>
+
+  <div class="section-header">
+    <div class="daily-current">
+      <h4>Daily Current Affairs</h4>
+      <p>Daily Current Affairs. Quick Bytes. Big Score.</p>
+      <button class="daily-current-affairs">Daily Current Affairs</button>
+    </div>
+
+    <div class="static-current">
+      <h4>Static Current Affairs</h4>
+      <p>Your shortcut to static GK success!</p>
+      <button class="static-current-affairs">Static Current Affairs</button>
+    </div>
+  </div>
+
+  <div class="articles-container"></div>
+</section>
+
+
+
+
+
+        <!-- Added articles-container for dynamic content -->
+        <div class="articles-container cards-container"></div>
         </section>
 
         <!-- Your Picks Section -->
@@ -181,4 +203,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
