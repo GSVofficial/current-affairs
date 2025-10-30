@@ -9,8 +9,6 @@
 <body>
 
 
-
-
     <!-- Header -->
     <header class="header">
         <div class="header-left">
@@ -18,6 +16,12 @@
             <h1>Current Affairs</h1>
         </div>
         <div class="header-right">
+            <!-- Added language switching buttons -->
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="hi">HI</button>
+                <button class="lang-btn" data-lang="ta">TA</button>
+            </div>
             <button class="search-btn">🔍</button>
             <button class="translate-btn">A</button>
             <button class="bookmark-btn">🔖</button>
@@ -69,23 +73,8 @@
             <div class="section-header">
                 <div class="section-title">Current Affairs</div>
             </div>
-            <div class="cards-container">
-                <!-- Daily Current Affairs -->
-                <div class="card ca-card">
-                    <div class="card-icon-large">📚</div>
-                    <h3 class="card-title daily-title">Daily Current Affairs</h3>
-                    <p class="card-subtitle">Daily Current Affairs. Quick Bytes. Big Score.</p>
-                    <button class="card-btn">Daily Current Affairs</button>
-                </div>
-
-                <!-- Static Current Affairs -->
-                <div class="card ca-card">
-                    <div class="card-icon-large">💡</div>
-                    <h3 class="card-title static-title">Static Current Affairs</h3>
-                    <p class="card-subtitle">your shortcut to static GK success!</p>
-                    <button class="card-btn">Static Current Affairs</button>
-                </div>
-            </div>
+            <!-- Added articles-container for dynamic content -->
+            <div class="articles-container cards-container"></div>
         </section>
 
         <!-- Your Picks Section -->

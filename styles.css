@@ -152,6 +152,36 @@ body {
   opacity: 0.7;
 }
 
+/* Language Switcher */
+.lang-switcher {
+  display: flex;
+  gap: 6px;
+  margin-right: 12px;
+}
+
+.lang-btn {
+  background: none;
+  border: 1px solid var(--accent-blue);
+  color: var(--text-secondary);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.lang-btn.active {
+  background-color: var(--accent-blue);
+  color: white;
+  border-color: var(--accent-blue);
+}
+
+.lang-btn:hover {
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+}
+
 /* Main Content */
 .main-content {
   padding-bottom: 80px;
@@ -425,6 +455,51 @@ body {
   font-weight: 600;
   text-align: center;
   color: var(--text-primary);
+}
+
+/* Article Cards */
+.article-card {
+  background-color: var(--secondary-bg);
+  border-radius: var(--border-radius);
+  padding: 16px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.article-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.article-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--accent-cyan);
+}
+
+.article-card p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.read-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--accent-blue);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.read-btn:hover {
+  background-color: #4f46e5;
 }
 
 /* Bottom Navigation */

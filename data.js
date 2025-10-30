@@ -1,68 +1,3 @@
-// Navigation functionality
-document.querySelectorAll(".nav-item").forEach((item) => {
-  item.addEventListener("click", function () {
-    // Remove active class from all items
-    document.querySelectorAll(".nav-item").forEach((nav) => {
-      nav.classList.remove("active")
-    })
-
-    // Add active class to clicked item
-    this.classList.add("active")
-
-    const page = this.getAttribute("data-page")
-    console.log("[v0] Navigating to:", page)
-
-    // Add your navigation logic here
-    // Example: window.location.href = `/${page}`;
-  })
-})
-
-// Card click handlers
-document.querySelectorAll(".card").forEach((card) => {
-  card.addEventListener("click", function () {
-    const title = this.querySelector(".card-title")?.textContent || "Card"
-    console.log("[v0] Card clicked:", title)
-    // Add your card click logic here
-  })
-})
-
-// Category click handlers
-document.querySelectorAll(".category-item").forEach((category) => {
-  category.addEventListener("click", function () {
-    const name = this.querySelector(".category-name")?.textContent || "Category"
-    console.log("[v0] Category clicked:", name)
-    // Add your category click logic here
-  })
-})
-
-// Button click handlers
-document.querySelectorAll(".card-btn").forEach((btn) => {
-  btn.addEventListener("click", function (e) {
-    e.stopPropagation()
-    const text = this.textContent
-    console.log("[v0] Button clicked:", text)
-    // Add your button click logic here
-  })
-})
-
-// Search functionality
-document.querySelector(".search-btn")?.addEventListener("click", () => {
-  console.log("[v0] Search clicked")
-  // Add your search logic here
-})
-
-// Menu functionality
-document.querySelector(".menu-btn")?.addEventListener("click", () => {
-  console.log("[v0] Menu clicked")
-  // Add your menu logic here
-})
-
-// Promo banner button
-document.querySelector(".promo-btn")?.addEventListener("click", () => {
-  console.log("[v0] Promo button clicked")
-  // Add your promo logic here
-})
-
 const currentAffairsData = {
   cas: [
     {
@@ -111,7 +46,7 @@ const currentAffairsData = {
       desc_ta:
         "📌 முக்கிய குறிப்புகள்:~~~~🔹 உலக **காபி** உற்பத்தியில் இந்தியா **ஆறாவது** இடத்தில் உள்ளது.~~~~🔹 உலக காபி உற்பத்தியில் இந்தியா **4%** மட்டுமே பங்களிக்கிறது.~~~~ ❓ மாதிரி MCQ:~~~~🔹🧠 காபி உற்பத்தியில் இந்தியாவின் உலகத் தரவரிசை என்ன?",
       desc_hi:
-        "📌 मुख्य बिंदु:~~~~🔹 विश्व **कॉफी** उற்பத்தியில் भारत का स्थान **छठा** है।~~~~🔹 भारत विश्व के कॉफी उற்பादन में केवल **4%** का योगदान करता है।~~~~ ❓ नमूना बहुविकल्पीय प्रश्न:~~~~🔹🧠 कॉफी उत्पादन में भारत का विश्व में कौन सा स्थान है?",
+        "📌 मुख्य बिंदु:~~~~🔹 विश्व **कॉफी** उत्पादन में भारत का स्थान **छठा** है।~~~~🔹 भारत विश्व के कॉफी उत्पादन में केवल **4%** का योगदान करता है।~~~~ ❓ नमूना बहुविकल्पीय प्रश्न:~~~~🔹🧠 कॉफी उत्पादन में भारत का विश्व में कौन सा स्थान है?",
       shorts_en: "India, 6th rank, Coffee production, 4% contribution.",
       shorts_ta: "இந்தியா, 6வது இடம், காபி உற்பத்தி, 4% பங்களிப்பு.",
       shorts_hi: "भारत, छठा स्थान, कॉफी उत्पादन, 4% योगदान।",
@@ -121,18 +56,18 @@ const currentAffairsData = {
     },
     {
       date: "28-10-2025",
-      title_en: "🌾 Crop Production and Raw Materials",
-      title_ta: "🌾 பயிர் உற்பத்தி மற்றும் மூலப்பொருட்கள்",
-      title_hi: "🌾 फसल उत्पादन और कच्चा माल",
+      title_en: "🌱 Crop Production and Raw Materials",
+      title_ta: "🌱 பயிர் உற்பத்தி மற்றும் மூலப்பொருட்கள்",
+      title_hi: "🌱 फसल उत्पादन और कच्चा माल",
       desc_en:
         "📌 Key Points:~~~~🔹 **Assam** is the biggest **tea** producer in the country.~~~~🔹 India holds the **first position** in the world in the production of **sugar-cane and sugar**.~~~~ ❓ Sample MCQ:~~~~🔹🧠 India ranks first globally in the production of which two related commodities?",
       desc_ta:
         "📌 முக்கிய குறிப்புகள்:~~~~🔹 நாட்டில் **அஸ்ஸாம்** மிகப்பெரிய **தேயிலை** உற்பத்தியாளர் ஆகும்.~~~~🔹 **கரும்பு மற்றும் சர்க்கரை** உற்பத்தியில் இந்தியா உலகில் **முதல் இடத்தில்** உள்ளது.~~~~ ❓ மாதிரி MCQ:~~~~🔹🧠 இந்தியா உலகளவில் எந்த இரண்டு தொடர்புடைய பொருட்களின் உற்பத்தியில் முதலிடம் வகிக்கிறது?",
       desc_hi:
         "📌 मुख्य बिंदु:~~~~🔹 देश में **असम** सबसे बड़ा **चाय** उत्पादक है।~~~~🔹 **गन्ना और चीनी** के उत्पादन में भारत विश्व में **पहले स्थान** पर है।~~~~ ❓ नमूना बहुविकल्पीय प्रश्न:~~~~🔹🧠 भारत विश्व स्तर पर किन दो संबंधित वस्तुओं के उत्पादन में पहले स्थान पर है?",
-      shorts_en: "Agriculture, raw material, foodgrains, industrial market.",
-      shorts_ta: "விவசாயம், மூலப்பொருள், உணவு தானியங்கள், தொழில்துறை சந்தை.",
-      shorts_hi: "कृषि, कच्चा माल, खाद्यान्न, औद्योगिक बाजार।",
+      shorts_en: "Assam tea, India first in sugar-cane and sugar.",
+      shorts_ta: "அஸ்ஸாம் தேயிலை, கரும்பு மற்றும் சர்க்கரையில் இந்தியா முதலிடம்.",
+      shorts_hi: "असम चाय, गन्ना और चीनी में भारत पहले स्थान पर।",
       ver: 24000,
       id: 281020254,
       category: "Economy",
@@ -183,7 +118,7 @@ const currentAffairsData = {
       desc_ta:
         "📌 முக்கிய குறிப்புகள்:~~~~🔹 இந்திய விவசாயம் **இன்னும் பருவமழையைச் சார்ந்துள்ளது**.~~~~ ❓ மாதிரி MCQ:~~~~🔹🧠 இந்திய விவசாயம் இன்னும் சார்ந்திருக்கும் முதன்மை காரணி எது?",
       desc_hi:
-        "📌 मुख्य बिंदु:~~~~🔹 भारतीय कृषि **अभी भी मानसून पर निर्भर** करती है।~~~~ ❓ नमूना बहुविकल्पीय प्रश्न:~~~~🔹🧠 भारतीय कृषि अभी भी किस प्राथमिक कारक पर निर्भर करती है?",
+        "📌 मुख्य बिंदु:~~~~🔹 भारतीय कृषि **अभी भी मानसून ��र निर्भर** करती है।~~~~ ❓ नमूना बहुविकल्पीय प्रश्न:~~~~🔹🧠 भारतीय कृषि अभी भी किस प्राथमिक कारक पर निर्भर करती है?",
       shorts_en: "Indian agriculture, monsoon dependency.",
       shorts_ta: "இந்திய விவசாயம், பருவமழை சார்ந்துள்ள நிலை.",
       shorts_hi: "भारतीय कृषि, मानसून पर निर्भरता।",
@@ -230,7 +165,7 @@ const currentAffairsData = {
     {
       date: "28-10-2025",
       title_en: "🍎 NFSA 2013: Distribution Method and Special Focus",
-      title_ta: "🍎 NFSA 2013: விநியோக முறை மற்றும் சிறப்பு கவனம்",
+      title_ta: "🍎 NFSA 2013: விநியோग முறை மற்றும் சிறப்பு கவனம்",
       title_hi: "🍎 NFSA 2013: वितरण विधि और विशेष ध्यान",
       desc_en:
         "📌 Key Points:~~~~🔹 Beneficiaries receive subsidized food grains under the **TPDS** (Targeted Public Distribution System).~~~~🔹 The Act covers about **two-thirds of the population** and lays special focus on **women and children** for nutritional support.~~~~ ❓ Sample MCQ:~~~~🔹🧠 Under which system do beneficiaries receive subsidized food grains through NFSA?",
@@ -370,58 +305,4 @@ const currentAffairsData = {
         "The text states beneficiaries receive subsidized food grains 'under TPDS (Targeted Public Distribution System)'.",
     },
   ],
-}
-
-let currentLanguage = "en"
-
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("[v0] Data loaded successfully:", currentAffairsData.cas.length, "articles")
-  renderContent()
-})
-
-// Language switching
-document.querySelectorAll(".lang-btn").forEach((btn) => {
-  btn.addEventListener("click", function () {
-    currentLanguage = this.getAttribute("data-lang")
-    document.querySelectorAll(".lang-btn").forEach((b) => b.classList.remove("active"))
-    this.classList.add("active")
-    renderContent()
-  })
-})
-
-function getText(obj, key) {
-  const langKey = `${key}_${currentLanguage}`
-  return obj[langKey] || obj[key] || ""
-}
-
-function renderArticles() {
-  const container = document.querySelector(".articles-container")
-  if (!container) {
-    console.log("[v0] Articles container not found")
-    return
-  }
-
-  container.innerHTML = currentAffairsData.cas
-    .map(
-      (article) => `
-    <div class="card article-card">
-      <h3 class="article-title">${getText(article, "title")}</h3>
-      <p class="article-desc">${getText(article, "shorts")}</p>
-      <button class="card-btn read-btn" onclick="readArticle(${article.id})">Read More</button>
-    </div>
-  `,
-    )
-    .join("")
-}
-
-function renderContent() {
-  renderArticles()
-}
-
-window.readArticle = (id) => {
-  const article = currentAffairsData.cas.find((a) => a.id === id)
-  if (article) {
-    console.log("[v0] Reading article:", getText(article, "title"))
-    alert(`${getText(article, "title")}\n\n${getText(article, "desc")}`)
-  }
 }
